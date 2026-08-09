@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>候車亭概念設計｜Piano Bus Shelter｜冉 RAN</title>
+<meta name="description" content="Piano Bus Shelter 候車亭概念設計。以鋼琴、城市移動、智慧候車、數位媒體與太陽能節能為核心的空間設計作品。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600&family=Noto+Serif+TC:wght@500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles-v05.css?v=20260808-2000">
+<style>
+.pbs-hero{display:grid;grid-template-columns:39% 61%;min-height:680px;background:var(--forest);color:var(--ivory)}
+.pbs-copy{padding:8vw 5vw 5vw 7vw;display:flex;flex-direction:column;justify-content:center}
+.pbs-label{font:500 10px "DM Sans";letter-spacing:.2em;color:var(--brass)}
+.pbs-copy h1{font:500 clamp(40px,4.8vw,72px) "Noto Serif TC";line-height:1.22;margin:18px 0}
+.pbs-copy h1 small{display:block;font:400 14px "DM Sans";letter-spacing:.08em;color:#c6d0ca;margin-top:14px}
+.pbs-copy>p{color:#c8d2cc;line-height:2;font-size:14px;max-width:560px}
+.pbs-hero-image{min-height:680px;background:url("assets/piano-bus-shelter/hero.webp") center/cover no-repeat}
+.pbs-meta{display:grid;grid-template-columns:1fr 1fr;gap:18px 24px;border-top:1px solid rgba(245,241,232,.2);margin-top:32px;padding-top:26px}
+.pbs-meta small{display:block;color:var(--brass);font:500 9px "DM Sans";letter-spacing:.15em;margin-bottom:5px}
+.pbs-meta span{font-size:12px;color:#e0e6e2}
+.pbs-section{padding:7vw;border-bottom:1px solid var(--line)}
+.pbs-section.alt{background:var(--ivory-2)}
+.pbs-head{display:grid;grid-template-columns:30% 1fr;gap:8vw;margin-bottom:40px}
+.pbs-head h2{font:500 clamp(30px,3.2vw,48px) "Noto Serif TC";color:var(--forest);margin:12px 0}
+.pbs-head>p{font-size:14px;line-height:2;color:var(--muted);margin:0;max-width:820px}
+.pbs-statement{font:500 clamp(22px,2.4vw,36px) "Noto Serif TC";line-height:1.8;color:var(--forest);max-width:1000px;margin:0}
+.keyword-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.keyword-row span{border:1px solid var(--line);padding:9px 13px;font:500 9px "DM Sans";letter-spacing:.13em;color:var(--forest)}
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line)}
+.feature{background:var(--ivory);padding:32px}
+.feature b{display:block;font:500 10px "DM Sans";letter-spacing:.15em;color:var(--brass);margin-bottom:12px}
+.feature h3{font:500 21px "Noto Serif TC";color:var(--forest);margin:0 0 12px}
+.feature p{font-size:12px;line-height:1.9;color:var(--muted);margin:0}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
+.info-grid div{background:var(--ivory);padding:22px 26px;display:grid;grid-template-columns:125px 1fr;gap:18px}
+.info-grid b{font:500 9px "DM Sans";letter-spacing:.15em;color:var(--brass)}
+.info-grid span{font-size:13px;line-height:1.7}
+.design-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.design-grid figure,.context-grid figure{margin:0;min-width:0}
+.design-grid img,.context-grid img{display:block;width:100%;background:#d7d2c6}
+
+/* 主總覽圖保留原始比例，讓大圖完整呈現 */
+.design-grid figure:first-child{grid-column:1/-1}
+.design-grid figure:first-child img{height:auto;aspect-ratio:auto;object-fit:contain}
+
+/* 左右並排圖片統一展示框比例，避免一大一小 */
+.design-grid figure:not(:first-child) img,
+.context-grid figure img{
+  aspect-ratio:4/3;
+  height:auto;
+  object-fit:cover;
+  object-position:center;
+}
+
+/* 左右兩張圖的圖說區也維持一致節奏 */
+.design-grid figcaption,.context-grid figcaption{
+  font-size:11px;color:var(--muted);line-height:1.7;margin-top:10px;
+  min-height:2.2em;
+}
+.context-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
+.context-note{font-size:11px;color:var(--muted);line-height:1.8;margin-top:18px}
+.pbs-next{padding:5vw 7vw 7vw;display:flex;justify-content:space-between;align-items:center}
+.pbs-next a{text-decoration:none;color:var(--forest);font:500 15px "Noto Serif TC"}
+@media(max-width:900px){
+ .pbs-hero{grid-template-columns:1fr}.pbs-hero-image{min-height:520px;order:-1}
+ .pbs-copy{padding:65px 7vw}.pbs-head{grid-template-columns:1fr;gap:25px}
+ .feature-grid{grid-template-columns:1fr 1fr}.design-grid,.context-grid{grid-template-columns:1fr}.design-grid figure:not(:first-child) img,.context-grid figure img{aspect-ratio:16/10}
+ .design-grid figure:first-child{grid-column:auto}
+}
+@media(max-width:560px){
+ .pbs-hero-image{min-height:390px}.pbs-meta{grid-template-columns:1fr}
+ .feature-grid,.info-grid{grid-template-columns:1fr}.info-grid div{grid-template-columns:1fr;gap:7px}
+ .pbs-section{padding:72px 7vw}.pbs-next{align-items:flex-start;gap:24px;flex-direction:column}
+}
+</style>
+</head>
+<body>
+<header>
+<a class="brand" href="index.html"><b>冉</b> RAN</a>
+<nav><a href="index.html#work">作品</a><a href="index.html#about">關於我</a><a href="index.html#services">服務項目</a><a href="index.html#contact">合作委託</a></nav>
+</header>
+
+<main>
+<section class="pbs-hero">
+<div class="pbs-copy">
+<span class="pbs-label">03 / SPACE DESIGN</span>
+<h1>候車亭概念設計<small>Piano Bus Shelter</small></h1>
+<p>以「城市移動中的音樂節奏」作為設計起點，將候車、資訊傳達、媒體展示與節能設備整合於同一座公共設施之中。透過鮮明的琴鍵語彙與流線棚架，讓候車亭不只提供遮蔽與等候功能，也成為具有辨識度的城市節點。</p>
+<div class="pbs-meta">
+<div><small>TYPE</small><span>智慧候車亭概念設計</span></div>
+<div><small>ROLE</small><span>Individual Concept Design</span></div>
+<div><small>TOOL</small><span>SketchUp</span></div>
+<div><small>YEAR</small><span>2022</span></div>
+</div>
+</div>
+<div class="pbs-hero-image" role="img" aria-label="Piano Bus Shelter 候車亭情境主視覺"></div>
+</section>
+
+<section class="pbs-section">
+<div class="pbs-head">
+<div><span class="pbs-label">PROJECT OVERVIEW</span><h2>專案概述</h2></div>
+<p>本案以「鋼琴 × 城市移動 × 智慧候車」為核心概念，思考日常交通設施除了滿足基本候車需求之外，是否也能成為具有記憶點與城市特色的公共空間。設計將黑白琴鍵、音樂節奏與連續流線轉譯為棚架、地坪及立面的造型語彙，建立從遠距辨識到近距使用都具有一致性的視覺形象。機能上整合即時乘車資訊、電子時刻表、大型廣告影像區、夜間 LED 照明與太陽能光電板，使資訊、媒體、照明與節能系統不再只是附加設備，而成為整體設計的一部分。</p>
+</div>
+<p class="pbs-statement">RHYTHM IN MOTION<br>城市律動</p>
+<div class="keyword-row">
+<span>RHYTHM</span><span>MUSIC</span><span>MOBILITY</span><span>SMART</span><span>MEDIA</span><span>SOLAR</span><span>NIGHT LIGHTING</span>
+</div>
+</section>
+
+<section class="pbs-section alt">
+<div class="pbs-head">
+<div><span class="pbs-label">DESIGN FEATURES</span><h2>設計特色</h2></div>
+<p>設計從「辨識性、候車機能、資訊整合、夜間使用與節能」五個面向同步發展，讓造型與設備彼此呼應，而不是各自獨立配置。候車區地坪並與既有人行空間順平銜接，減少不必要的高差，使整體空間在視覺與使用動線上更連續。</p>
+</div>
+<div class="feature-grid">
+<div class="feature"><b>01 / PIANO LANGUAGE</b><h3>鋼琴意象</h3><p>以黑白琴鍵作為主要設計語彙，從地坪延伸至立面與端部構成，利用黑白對比與重複節奏建立鮮明識別。即使在遠距離觀看，也能快速辨認候車亭的主題意象，並使公共設施具備更強的場所記憶點。</p></div>
+<div class="feature"><b>02 / FLOWING CANOPY</b><h3>流線棚架</h3><p>以連續弧形構件形成具有包覆感的棚架輪廓，在提供遮蔽的同時，以重複排列創造如音樂節拍般的視覺韻律。流線造型也呼應車輛行進與城市移動的速度感，使整體量體呈現輕盈而連續的方向性。</p></div>
+<div class="feature"><b>03 / SMART TRANSIT</b><h3>智慧候車</h3><p>將候車最常需要確認的資訊集中於智慧站牌介面，包括現在時間、下一班車、車次、行駛方向與乘車時刻等，降低乘客在不同資訊載體間搜尋的負擔。資訊設備的位置亦納入整體空間配置，使乘客在等候區即可快速閱讀。</p></div>
+<div class="feature"><b>04 / MEDIA WALL</b><h3>廣告影像區</h3><p>於主要視覺面配置大型廣告影像區，可彈性呈現商業廣告、地方活動、公共宣導與城市資訊。媒體牆同時被視為候車亭立面構成的一部分，使數位內容與建築造型整合，而非後期附掛於結構表面。</p></div>
+<div class="feature"><b>05 / SOLAR ENERGY</b><h3>太陽能節能</h3><p>於棚架上方配置太陽能光電板，概念上可支援 LED 照明、資訊顯示與部分低耗能設備的能源需求。透過將光電設備納入屋頂構成，讓節能機能與候車亭外觀同步思考，呈現智慧公共設施的設計方向。</p></div>
+<div class="feature"><b>06 / NIGHT LIGHTING</b><h3>夜間照明設計</h3><p>結合候車亭頂棚與結構配置導入線性照明，強化夜間候車區的辨識度與使用安全。燈光以簡潔、低干擾的方式融入整體造型，使琴鍵意象在夜間仍保有清楚的視覺層次，同時營造舒適且具有識別性的候車環境。</p></div>
+</div>
+</section>
+
+<section class="pbs-section">
+<div class="pbs-head">
+<div><span class="pbs-label">PROJECT INFO</span><h2>設計資訊</h2></div>
+<p>本作品為個人概念設計，著重於公共候車設施的造型、使用情境、設備整合與視覺識別。尺寸、材料及能源系統皆以設計意向與空間尺度推演為主，用於呈現設計思考與整合能力，並非施工規範或實際完工工程。</p>
+</div>
+<div class="info-grid">
+<div><b>SITE</b><span>都市濱水道路／公共運輸候車空間</span></div>
+<div><b>LOCATION</b><span>Conceptual Site</span></div>
+<div><b>SIZE</b><span>Approx. L 8.0 × W 4.0 × H 2.5 m</span></div>
+<div><b>MATERIAL</b><span>白色大理石質感飾面・金屬構件・藍色透明玻璃・耐候面材</span></div>
+<div><b>SYSTEM</b><span>太陽能系統・智慧候車資訊・數位媒體展示</span></div>
+<div><b>LIGHTING</b><span>LED 線型燈／夜間識別照明</span></div>
+</div>
+</section>
+
+<section class="pbs-section alt">
+<div class="pbs-head">
+<div><span class="pbs-label">DESIGN OVERVIEW</span><h2>設計總覽</h2></div>
+<p>以下視圖以原始 2022 SketchUp 設計為基礎重新整理，從鳥瞰、正立面、側向、後側與內部視角呈現候車亭的空間構成。透過不同角度可進一步閱讀琴鍵立面、流線棚架、智慧站牌、廣告影像區、座椅與設備之間的配置關係，以及整體造型在不同觀看距離下的視覺層次。</p>
+</div>
+<div class="design-grid">
+<figure><img src="assets/piano-bus-shelter/01-overview.webp" alt="Piano Bus Shelter 鳥瞰與整體配置"><figcaption>01 / OVERVIEW — 鳥瞰與整體配置</figcaption></figure>
+<figure><img src="assets/piano-bus-shelter/02-front.webp" alt="琴鍵立面、廣告影像區與入口"><figcaption>02 / FRONT — 琴鍵立面、廣告影像區與入口</figcaption></figure>
+<figure><img src="assets/piano-bus-shelter/03-side.webp" alt="長向棚架與候車空間"><figcaption>03 / SIDE — 長向棚架與候車空間</figcaption></figure>
+<figure><img src="assets/piano-bus-shelter/04-rear.webp" alt="站牌與後側構成"><figcaption>04 / REAR — 站牌與後側構成</figcaption></figure>
+<figure><img src="assets/piano-bus-shelter/05-interior.webp" alt="座椅、設備與內部視角"><figcaption>05 / INTERIOR — 座椅、設備與內部視角</figcaption></figure>
+</div>
+</section>
+
+<section class="pbs-section">
+<div class="pbs-head">
+<div><span class="pbs-label">CONTEXT VISUALIZATION</span><h2>環境情境模擬</h2></div>
+<p>為進一步檢視候車亭置入實際公共空間後的尺度感、周邊關係與視覺辨識度，將原始設計置入日間道路與候車情境中進行視覺化展示。情境圖著重觀察棚架比例、廣告影像區、太陽能設備與人行空間之間的關係，並呈現設計在城市環境中的整體氛圍。</p>
+</div>
+<div class="context-grid">
+<figure><img src="assets/piano-bus-shelter/context-day.webp" alt="Piano Bus Shelter 日間情境"><figcaption>DAY / 日間情境</figcaption></figure>
+<figure><img src="assets/piano-bus-shelter/context-solar.webp" alt="Piano Bus Shelter 太陽能與智慧設施情境"><figcaption>SOLAR / 太陽能與智慧設施情境</figcaption></figure>
+</div>
+<p class="context-note">Portfolio visualization refined from the original 2022 SketchUp design. 部分情境圖為視覺化呈現，非實際完工照片。</p>
+</section>
+
+<section class="pbs-next">
+<span class="pbs-label">03 / SPACE DESIGN</span>
+<a href="space-design.html">← 回到空間・3D 作品</a>
+</section>
+</main>
+
+<footer><b>冉 RAN</b><span>Engineering · Design · Digital　© <i id="year"></i> RAN</span></footer>
+<button id="backToTop" class="back-to-top" type="button" aria-label="回到頁面頂端" title="回到頂端">↑</button>
+<script src="script.js"></script>
+</body>
+</html>
